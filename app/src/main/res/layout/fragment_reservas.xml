@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.daale.ppi.reservas"
+        android:id="@+id/reservas">
+
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="27dp"
+            android:id="@+id/relativeLayout"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:textColor="@color/colorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha:"
+                android:textSize="20sp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:id="@+id/textView3"
+                android:layout_alignBaseline="@+id/tvDate"
+                android:layout_alignBottom="@+id/tvDate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:background="@color/colorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione la fecha."
+                android:id="@+id/tvDate"
+                android:textSize="20sp"
+                android:layout_marginTop="63dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textView3"
+                android:layout_toEndOf="@+id/textView3"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp" />
+
+
+            <TextView
+                android:textColor="@color/colorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hora:"
+                android:textSize="20sp"
+                android:id="@+id/textView2"
+                android:layout_alignBaseline="@+id/tvTime"
+                android:layout_alignBottom="@+id/tvTime"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_alignStart="@+id/textView3" />
+
+            <TextView
+                android:background="@color/colorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione la Hora."
+                android:id="@+id/tvTime"
+                android:textSize="20sp"
+                android:layout_below="@+id/tvDate"
+                android:layout_alignLeft="@+id/tvDate"
+                android:layout_alignStart="@+id/tvDate"
+                android:layout_marginTop="33dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:text="Numero de personas:"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/tvTime"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignStart="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Numero de mesa:"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:id="@+id/textView5"
+                android:layout_below="@+id/editText"
+                android:layout_alignLeft="@+id/textView4"
+                android:layout_alignStart="@+id/textView4"
+                android:layout_marginTop="18dp" />
+
+            <Spinner
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:spinnerMode="dropdown"
+                android:id="@+id/editText"
+                android:layout_alignBaseline="@+id/textView4"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_toRightOf="@+id/textView4"
+                android:layout_toEndOf="@+id/textView4"
+                android:background="@color/colorText"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/N_mesa"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_alignRight="@+id/editText"
+                android:layout_alignEnd="@+id/editText"
+                android:textAlignment="center"
+                android:background="@color/colorText"
+                android:layout_alignTop="@+id/textView5" />
+
+            <Button
+                android:id="@+id/btnconsul"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="consultar disponibilidad"
+                android:background="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout">
+
+            <Button
+                android:id="@+id/btnreserva_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reservar"
+                android:background="@color/colorAccent"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/mesa_2"
+                android:layout_alignEnd="@+id/mesa_2"
+                android:layout_marginTop="54dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plano"
+                android:id="@+id/imageView3"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mesas_3_v"
+                android:layout_marginTop="171dp"
+                android:id="@+id/mesa_3"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/mesa_4"
+                android:layout_alignStart="@+id/mesa_4"
+                android:enabled="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mesas_4_v"
+                android:id="@+id/mesa_4"
+                android:layout_below="@+id/mesa_3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                android:enabled="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mesas_5_v"
+                android:id="@+id/mesa_5"
+                android:layout_below="@+id/mesa_4"
+                android:layout_alignLeft="@+id/mesa_4"
+                android:layout_alignStart="@+id/mesa_4"
+                android:enabled="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mesas_6_v"
+                android:id="@+id/mesa_6"
+                android:layout_alignTop="@+id/mesa_7"
+                android:layout_toRightOf="@+id/mesa_7"
+                android:layout_toEndOf="@+id/mesa_7"
+                android:enabled="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mesas_7_v"
+                android:id="@+id/mesa_7"
+                android:layout_alignTop="@+id/mesa_8"
+                android:layout_toRightOf="@+id/mesa_8"
+                android:layout_toEndOf="@+id/mesa_8"
+                android:enabled="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mesas_8_v"
+                android:id="@+id/mesa_8"
+                android:layout_alignTop="@+id/mesa_1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="26dp"
+                android:enabled="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mesas_1_v"
+                android:id="@+id/mesa_1"
+                android:layout_marginTop="21dp"
+                android:layout_below="@+id/mesa_5"
+                android:layout_toRightOf="@+id/mesa_6"
+                android:layout_toEndOf="@+id/mesa_6"
+                android:enabled="true"/>
+
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mesas_2_v"
+            android:id="@+id/mesa_2"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/mesa_7"
+                android:layout_toEndOf="@+id/mesa_7"
+                android:layout_marginLeft="39dp"
+                android:layout_marginStart="39dp"
+                android:enabled="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mesas_9_v"
+                android:id="@+id/mesa_9"
+                android:layout_alignBottom="@+id/mesa_1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:enabled="true"/>
+        </RelativeLayout>
+
+
+        <!---->
+
+    </RelativeLayout>
+</ScrollView>

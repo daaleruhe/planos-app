@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.daale.ppi.inicio_de_sesion_usu"
+    android:background="@drawable/fondo"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="282dp"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:background="@color/colorText"
+            android:layout_above="@+id/email_sign_in_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="17dp" />
+
+
+        <EditText
+
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:hint="Correo Electrónico"
+            android:imeActionId="@+id/login"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:background="@color/colorText"
+            tools:layout_editor_absoluteY="363dp"
+            tools:layout_editor_absoluteX="84dp"
+            android:layout_above="@+id/email"
+            android:layout_marginBottom="21dp" />
+
+
+    <Button
+        android:id="@+id/email_sign_in_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="iniciar sesión"
+        android:textStyle="bold"
+        android:background="@color/colorAccent"
+        android:layout_weight="2.47"
+        tools:layout_editor_absoluteY="435dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
